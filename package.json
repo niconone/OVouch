@@ -1,6 +1,6 @@
 {
   "name": "ovouch",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "OVouch",
   "main": "index.js",
   "dependencies": {},
@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/niconone/OVouch.git"
+    "url": "git://github.com/niconone/ovouch.git"
   },
   "keywords": [
   ],
   "author": "NICONONE",
-  "license": "GPLv3"
+  "license": "GPL-3.0"
 }
