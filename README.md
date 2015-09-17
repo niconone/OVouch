@@ -51,4 +51,4 @@ Check the test file for examples.
 
 ## License
 
-GPLv3
+BSD-3-Clause

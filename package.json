@@ -1,6 +1,6 @@
 {
   "name": "ovouch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OVouch",
   "main": "index.js",
   "dependencies": {},
@@ -18,5 +18,5 @@
   "keywords": [
   ],
   "author": "NICONONE",
-  "license": "GPL-3.0"
+  "license": "BSD-3-Clause"
 }
