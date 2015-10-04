@@ -78,6 +78,10 @@ OVouch.prototype = {
   },
 
   addToTrustedNetwork: function(key, userObj) {
+    if (this._banned[key]) {
+      console.log('********** user banned, not adding ', key)
+      return;
+    }
     this._trustedNetwork[key] = userObj;
     delete this._network[key];
   },
@@ -87,6 +91,9 @@ OVouch.prototype = {
   },
 
   addToNetwork: function(key, userObj) {
+    if (this._banned[key]) {
+      return;
+    }
     userObj.vouchedBy = {};
     this._network[key] = userObj;
   },
@@ -96,7 +103,7 @@ OVouch.prototype = {
   },
 
   addVouch: function(key, voucherKey) {
-    if (!this._trustedNetwork[voucherKey]) {
+    if (!this._trustedNetwork[voucherKey] || this._banned[key]) {
       return;
     }
 

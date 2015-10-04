@@ -176,20 +176,14 @@ describe('OVouch', function() {
     should.exist(ovouch.banned[key]);
 
     ovouch.addToNetwork(key, user);
-    should.exist(ovouch.network[key]);
-    ovouch.banUser(key);
     should.not.exist(ovouch.network[key]);
-    should.exist(ovouch.banned[key]);
 
-    ovouch.addToNetwork(key, user);
     ovouch.addToTrustedNetwork(trusted1, user1);
     ovouch.addToTrustedNetwork(trusted2, user2);
     ovouch.addVouch(key, trusted1);
     ovouch.addVouch(key, trusted2);
-    should.exist(ovouch.vouchedNetwork[key]);
-    ovouch.banUser(key);
     should.not.exist(ovouch.vouchedNetwork[key]);
-    should.exist(ovouch.banned[key]);
+
     done();
   });
 
